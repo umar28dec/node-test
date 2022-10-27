@@ -1,0 +1,52 @@
+const people = {
+   name: {
+      fullName: 'Ram Kumar',
+      details: {
+         age: 31,
+         isEmployed: true,
+         name: {
+            fullName: 'Ram Kumar',
+            details: {
+               age: 31,
+               isEmployed: true
+            }
+         }
+      }
+   }
+};
+const people1 = {
+    name: {
+       fullName: 'Ram Kumar',
+       details: {
+          age: 31,
+          isEmployed: true,
+          name: {
+             fullName: 'Ram Kumar',
+             details: {
+                age: 31,
+                isEmployed: true
+             }
+          }
+       }
+    }
+ };
+
+function recursiveSearch(obj1 , obj2,  result = true){
+    let x = result;
+    Object.keys(obj1).forEach((key)=>{
+        let value = obj1[key];
+        if(typeof value != 'object'){
+            if(obj2.hasOwnProperty(key) && (value == obj2[key])){
+                x = true;
+            }else{
+                x = false;
+            }
+        }else if((typeof value === 'object') && (result == true)){
+            recursiveSearch(value, x)    
+        }
+        
+    })
+    return x;
+}
+
+console.log(recursiveSearch({name:"umar", age:{age:25}}, {name:"umar", age:{age:25}}));

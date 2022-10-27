@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.js",
+  "scripts": {
+    "start": "nodemon -L 1.js",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "nodemon": "^2.0.19",
+    "serverless-offline": "^9.2.6"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.3"
+  }
+}

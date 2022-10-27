@@ -1,0 +1,39 @@
+{
+  "name": "array examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.js",
+  "scripts": {
+    "start": "nodemon -L server.js",
+    "dev": "nodemon",
+    "test": "mocha --timeout 10000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "nodemon": "^2.0.19",
+    "serverless-offline": "^9.2.6",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "kafka-node": "^5.0.0",
+    "loadtest": "^5.2.0",
+    "mocha": "^10.1.0",
+    "mock-req": "^0.2.0",
+    "mock-res": "^0.6.0",
+    "mongoose": "^6.5.3",
+    "nock": "^13.2.9",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.8.0",
+    "puppeteer": "^18.0.5",
+    "request": "^2.88.2",
+    "supertest": "^6.3.0"
+  }
+}

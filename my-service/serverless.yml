@@ -1,0 +1,24 @@
+org: additionalbobolink
+console: true
+service: my-service
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /hello
+          method: get
+  hello1:
+    handler: handler.hello1
+    events:
+      - httpApi:
+          path: /hello1
+          method: get
+## adding these two lines
+#plugins:
+#  - serverless-offline

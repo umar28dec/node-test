@@ -1,0 +1,32 @@
+const people = {
+   name: {
+      fullName: 'Ram Kumar',
+      details: {
+         age: 31,
+         isEmployed: true,
+         name: {
+            fullName: 'Ram Kumar',
+            details: {
+               age: 31,
+               isEmployed: true
+            }
+         }
+      }
+   }
+};
+
+function recursiveSearch(obj , result = []){
+    const x = result;
+    Object.keys(obj).forEach((key)=>{
+        let value = obj[key];
+        if(typeof value != 'object'){
+            x.push(value)
+        }else if(typeof value === 'object'){
+            recursiveSearch(value, x)    
+        }
+        
+    })
+    return x;
+}
+
+console.log(recursiveSearch(people));

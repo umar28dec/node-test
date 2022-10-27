@@ -1,0 +1,20 @@
+class Node{
+    constructor(value, next = null){
+        this.value = value;
+        this.next = next;
+
+    }
+}
+
+class List{
+    constructor(){
+        this.head = new Node('Head')
+    }
+
+    find(value){
+        let temNode = this.head;
+        while(temNode.value != value){
+            temNode = temNode.next;
+        }
+    }
+}
